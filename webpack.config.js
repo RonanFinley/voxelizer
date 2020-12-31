@@ -40,7 +40,7 @@ let umdConfig = {
         new webpack.BannerPlugin({banner: banner}),
     ],
     externals: {
-      three: 'THREE',
+      three: 'three',
     }
 };
 
