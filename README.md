@@ -10,7 +10,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/andstor/voxelizer/badge.svg?branch=master)](https://coveralls.io/github/andstor/voxelizer?branch=master)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/andstor/voxelizer.svg?)](https://lgtm.com/projects/g/andstor/voxelizer/context:javascript)
 
-Voxelizer is a JavaScript voxelization engine for conducting voxelization of 3D models. It does so by leveraging [three.js](https://github.com/mrdoob/three.js/) and allowing you to use it's wast ecosystem of file loaders, plugins, etc.
+Voxelizer is a JavaScript voxelization engine for conducting voxelization of 3D models. It does so by leveraging [three.js](https://github.com/mrdoob/three.js/) and allowing you to use it's vast ecosystem of file loaders, plugins, etc.
 
 [Examples](https://andstor.github.io/voxelizer/examples/) - 
 [Documentation](https://andstor.github.io/voxelizer/) - 
@@ -71,7 +71,7 @@ const { Sampler, XMLExporter } = window.Voxelizer;
 
 
 // Generate a yellow torus mesh to voxelize.
-let geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
+let geometry = new THREE.TorusBufferGeometry( 10, 3, 16, 100 );
 let material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 let torus = new THREE.Mesh( geometry, material );
 
@@ -94,7 +94,7 @@ exporter.parse(data, function (xml) {
 ```
 
 ## Import support
-Voxelizer is able to load any mesh created with three.js. By doing so, one can make use of the around 40 📄 file loaders provided by three.js, including support for the popular [glTF](https://threejs.org/examples/?q=loader#webgl_loader_gltf), [OBJ](https://threejs.org/examples/?q=loader#webgl_loader_obj_mtl) and [STL](https://threejs.org/examples/?q=loader#webgl_loader_stl) formats. 
+Voxelizer is able to load any buffer mesh created with three.js. By doing so, one can make use of the around 40 📄 file loaders provided by three.js, including support for the popular [glTF](https://threejs.org/examples/?q=loader#webgl_loader_gltf), [OBJ](https://threejs.org/examples/?q=loader#webgl_loader_obj_mtl) and [STL](https://threejs.org/examples/?q=loader#webgl_loader_stl) formats. 
 
 three.js classifies these [loaders](https://github.com/mrdoob/three.js/tree/master/examples/jsm/loaders) as *"examples"*. Please see the [three.js documentation](https://threejs.org/docs/index.html#manual/en/introduction/Loading-3D-models) for how to use these. 
 
